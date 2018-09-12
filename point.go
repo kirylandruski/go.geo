@@ -354,3 +354,8 @@ func (p *Point) Round(factor ...int) *Point {
 
 	return p
 }
+
+// Zero returns true if p equals {0, 0}
+func (p *Point) Zero() bool {
+	return p[0] == 0 && p[1] == 0
+}

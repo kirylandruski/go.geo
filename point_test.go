@@ -483,3 +483,19 @@ func TestPointRoundDefault(t *testing.T) {
 		t.Errorf("point, round expected %v == %v", res, expected)
 	}
 }
+
+func TestPointNonZero(t *testing.T) {
+	p := NewPoint(1, 0)
+	res := p.Zero()
+	if res {
+		t.Errorf("point, zero expected %v == %v", res, false)
+	}
+}
+
+func TestPointZero(t *testing.T) {
+	p := NewPoint(0, 0)
+	res := p.Zero()
+	if !res {
+		t.Errorf("point, zero expected %v == %v", res, true)
+	}
+}
